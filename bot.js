@@ -9,11 +9,11 @@ client.on('message', message => {
   // something else VV xd    
   if(message.content.toLowerCase().startsWith("!addrole"))
         {
-            var args = message.content.toLowerCase().split(" ");
+            var args = message.content.toLowerCase().split(' ');
             console.log(args);
-            if(args[1] === 'tai')
+            if(args[1] === 'reputable')
                 {
-                    var role = message.guild.roles.find("name", "Tai");
+                    var role = message.guild.roles.find("name", "Reputable");
                     console.log("Role Found!")
                     message.member.addRole(role.id);
                 }
