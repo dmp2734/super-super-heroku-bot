@@ -6,6 +6,19 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  // something else VV xd    
+  if(message.content.toLowerCase().startsWith("!addrole"))
+        {
+            var args = message.content.toLowerCase().split(" ");
+            console.log(args);
+            if(args[1] === 'tai')
+                {
+                    var role = message.guild.roles.find("name", "Tai");
+                    console.log("Role Found!")
+                    message.member.addRole(role.id);
+                }
+        }
+  
   // Ignore messages that aren't from a guild
   if (!message.guild) return;
 
@@ -43,18 +56,6 @@ client.on('message', message => {
       message.reply('You didn\'t mention the user to kick!');
     }
   }
-  client.on('message', message => {
-    if(message.content.toLowerCase().startsWith("!addrole"))
-        {
-            var args = message.content.toLowerCase().split(" ");
-            console.log(args);
-            if(args[1] === 'SM')
-                {
-                    var role = message.guild.roles.find("name", "Site Moderator");
-                    console.log("Role Found!")
-                    message.member.addRole(role.id);
-                }
-        }
 });
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
